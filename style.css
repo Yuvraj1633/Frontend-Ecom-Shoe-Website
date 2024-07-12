@@ -1,0 +1,497 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    /* font-family: 'Inconsolata', monospace;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Sofia Sans Extra Condensed', sans-serif; */
+
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    background-color: black;
+    color: white;
+    padding: 20px 40px;
+
+}
+
+.navTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    background-color: gray;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.searchInput {
+    background-color: transparent;
+    border: none;
+
+}
+
+.searchInput::placeholder {
+    color: lightgray;
+}
+
+.limitedOffer {
+    font-size: 20px;
+    border-bottom: 2px solid green;
+    cursor: pointer;
+}
+
+.navBottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuItem {
+    margin-right: 50px;
+    cursor: pointer;
+    color: lightgray;
+    font-weight: 400;
+}
+
+.slider {
+    background-image: url(https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80);
+    /* clip path maker */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 81%);
+    overflow: hidden;
+}
+
+.sliderWrap {
+    display: flex;
+    width: 500vw;
+    transition: all 1s ease-in-out;
+}
+
+.slideItem {
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+}
+
+.slideCircle {
+    width: 750px;
+    height: 750px;
+    position: absolute;
+    border-radius: 50%;
+    /* background-color: aqua; */
+}
+
+.sliderImg {
+    z-index: 1;
+}
+
+.sliderTitle {
+    color: white;
+    /* align-items: center;
+    justify-content: center; */
+
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    font-size: 60px;
+    text-align: center;
+    z-index: 1;
+}
+
+.sliderPrice {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    color: white;
+    border: 1px solid gray;
+    font-size: 60px;
+    font-weight: 300;
+    z-index: 1;
+
+}
+
+.buyButton {
+    position: absolute;
+    bottom: 40%;
+    right: 10%;
+    color: white;
+    border: 1px solid gray;
+    background-color: black;
+    font-size: 40px;
+    font-weight: 300;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 5%;
+
+}
+
+.buyButton:hover {
+    background-color: white;
+    color: black;
+}
+
+.slideItem:nth-child(1) .slideCircle {
+    background-color: green;
+}
+
+.slideItem:nth-child(2) .slideCircle {
+    background-color: rgb(230, 201, 59);
+}
+
+.slideItem:nth-child(3) .slideCircle {
+    background-color: rgb(121, 81, 180);
+}
+
+.slideItem:nth-child(4) .slideCircle {
+    background-color: rgb(231, 105, 164);
+}
+
+.slideItem:nth-child(5) .slideCircle {
+    background-color: rgb(218, 134, 66);
+}
+
+
+.slideItem:nth-child(1) .sliderPrice {
+    color: green;
+}
+
+.slideItem:nth-child(2) .sliderPrice {
+    color: rgb(230, 201, 59);
+}
+
+.slideItem:nth-child(3) .sliderPrice {
+    color: rgb(121, 81, 180);
+}
+
+.slideItem:nth-child(4) .sliderPrice {
+    color: rgb(231, 105, 164);
+}
+
+.slideItem:nth-child(5) .sliderPrice {
+    color: rgb(218, 134, 66);
+}
+
+
+
+/* REATURES---------- */
+
+.features {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 50px;
+}
+
+.feature {
+    display: flex;
+    /* height: 50px;
+    width: 50px; */
+    /* TO MAKE VARTICAL */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.feacherImg {
+    height: 50px;
+    width: 50px;
+}
+
+.featureTitle {
+    font-size: 20px;
+    font-weight: 90px;
+    margin: 10px;
+}
+
+.featureDescription {
+    color: gray;
+    width: 50%;
+    height: 100px;
+}
+
+.product {
+    background-color: azure;
+    height: 100vh;
+    position: relative;
+    clip-path: polygon(0 18%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.productImg {
+    width: 50%;
+    position: absolute;
+}
+
+.productDetails {
+    position: absolute;
+    top: 10%;
+    right: 0%;
+    width: 40%;
+    padding: 10px;
+
+}
+
+.productTitle {
+    font-size: 60px;
+    padding: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.productPrice {
+    font-size: 30px;
+    padding: 5px;
+}
+
+.productDesc {
+    color: gray;
+    padding: 10px;
+}
+
+.produColor,
+.productSize {
+    display: flex;
+    padding: 10px;
+}
+
+.color {
+
+    font-size: small;
+    height: 30px;
+    width: 30px;
+    border-radius: 30%;
+    /* background-color: black; */
+    margin: 5px;
+    color: transparent;
+    cursor: pointer;
+
+}
+
+.color:nth-child(1) {
+    background-color: black;
+}
+
+.color:nth-child(2) {
+    background-color: darkblue;
+}
+
+.size {
+    padding: 5px 20px;
+    cursor: pointer;
+    margin-right: 10px;
+    border: 1px solid black;
+    font-size: 15px;
+}
+
+.productBuy {
+    color: white;
+    background-color: black;
+    padding: 5px 10px;
+    position: relative;
+    left: 80%;
+    cursor: pointer;
+}
+
+.productBuy:hover {
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* PAYMERNT DETAILS */
+
+.payment {
+
+    width: 500px;
+    height: 500px;
+    background-color: rgb(238, 231, 238);
+    position: absolute;
+    top: 10%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    /* display: flex table-column; */
+    -webkit-box-shadow: -2px 25px 60px -14px rgba(0, 0, 0, 0.63);
+    -moz-box-shadow: -2px 25px 60px -14px rgba(0, 0, 0, 0.63);
+    box-shadow: -2px 25px 60px -14px rgba(0, 0, 0, 0.63);
+    padding: 10px 50px;
+    display: none;
+    flex-direction: column;
+
+}
+
+.payInput {
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+.payInput::placeholder{
+    color: rgb(210, 219, 225);
+}
+label{
+    font-size: 14px;
+}
+
+.cardInfo{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.cardImg{
+    padding-right: 20px;
+}
+
+.sm{
+    width: 30%;
+}
+
+.payButton{
+    top: 100%;
+    background-color: rgb(108, 209, 108);
+    margin: 50px 0;
+}
+
+.cancel{
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    background-color: gray;
+    color: white;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+/* PHOTO GALLERY------------ */
+
+.gallery{
+    display: flex;
+    padding: 10px;
+}
+
+.galleryItem{
+    /* display: flex; */
+    flex: 1;
+    padding: 30px;
+    box-shadow: 18px 19px 15px -11px rgba(0,0,0,0.1);
+}
+
+.galleryImg{
+    width: 100%;
+}
+
+.nseason{
+    display: flex;
+    padding: 20px;
+}
+
+.newItem{
+    flex: 1;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;    
+    text-align: center;
+    justify-content: center;
+
+    /* margin: 5px; */
+    
+}
+
+.nsImg{
+    width: 100%;
+    height: 500px;
+}
+
+.nsButton{
+    cursor: pointer;
+    padding: 10px;
+    font-weight: 500px;
+}
+
+
+/* FOOTER ------------------------- */
+
+.footer{
+    display: flex;
+    padding: 50px;
+}
+
+.footerLeft{
+    display: flex;
+    flex: 3;
+    justify-content: space-between;
+    margin: 10px;
+    /* padding-right: 10px; */
+
+}
+.fList{
+    padding: 0;
+}
+
+.fListItem{
+    color: gray;
+    padding-bottom: 10px;
+    cursor: pointer;
+
+}
+
+.footerRight{
+    flex: 2;
+    display: flex;
+    padding-left: 100px;
+    flex-direction: column;
+  justify-content: space-between;
+}
+.frMenu{
+    padding: 10px;
+}
+
+.frInputRoom{
+   display: flex;
+   height: 20px;
+   align-items: center;
+}
+.frInput{
+    
+}
+.frJoin{
+    width: 30px;
+    height: 20px;
+    color: white;
+    background-color: black;
+    margin-left: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.frIcon{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.copyRight{
+    color: gray;
+}
